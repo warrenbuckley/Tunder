@@ -1,0 +1,23 @@
+<ion-view view-title="Login">
+  <ion-content class="login-view">
+
+    <h3 class="login-title">Welcome to Tunder</h3>  
+       
+       <div class="list">
+          <label class="item item-input">
+            <span class="input-label">Username</span>
+            <input type="text" ng-model="username">
+          </label>
+
+          <label class="item item-input">
+            <span class="input-label">Password</span>
+            <input type="password" ng-model="password">
+          </label>
+        </div>
+       
+        <div class="padding">
+            <button ng-click="login(username, password)" class="button button-block button-positive activated">Sign In</button>
+        </div>
+
+  </ion-content>
+</ion-view>

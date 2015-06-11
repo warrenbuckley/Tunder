@@ -1,0 +1,25 @@
+<ion-view view-title="Account">
+  <ion-content>
+    	
+		<div class="list card" ng-if="currentMember">
+	            <div class="item item-body">
+
+	                <a href ng-click="upload()">
+	                    <img class="full-image" ng-if="currentMember.properties.avatar"
+	                        ng-src="{{baseUrl}}{{currentMember.properties.avatar}}">
+
+	                    <img class="full-image" 
+	                    		ng-if="!currentMember.properties.avatar" 
+	                    		ng-src="{{gravatar(currentMember.email)}}" />    
+	                </a>
+	            </div>
+
+	            <a class="item">
+	                <h2>{{currentMember.name}}</h2>
+	                <p>{{currentMember.email}}</p>
+	            </a>
+	    </div>
+
+	    <input type="file" id="file" style="display: none" />
+  </ion-content>
+</ion-view>

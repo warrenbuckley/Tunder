@@ -1,0 +1,32 @@
+<ion-view view-title="tUnder">
+  <ion-content class="padding">
+    
+    <td-cards>
+      <div class="actions">
+        <i class="icon ion-sad-outline"></i>
+        <i class="icon ion-happy-outline"></i>
+
+      </div>
+      <div class="cards">
+
+        <td-card ng-repeat="member in members" 
+          
+          on-swipe-left="cardSwipedLeft($index)" 
+          on-swipe-right="cardSwipedRight($index)" >
+              
+              <div class="swipe-card" style="background-image: url({{gravatar(member.email)}})">
+                  <span>{{member.name}}</span>
+              </div>
+
+              <!--
+              <div class="swipe-card" style="background-image: url({{baseUrl}}{{member.properties.avatar}})">
+                  <span>{{member.name}}</span>
+              </div>
+              -->
+        </td-card>
+
+      </div>
+
+    </td-cards>
+  </ion-content>
+</ion-view>
